@@ -71,7 +71,6 @@
 /* ========== section: PS 기기 애니메이션 (#consoleSec) ========== */
 #consoleSec{
   background-color: var(--black-600);
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1823,4 +1822,5 @@
   .br-m{
     display: block;
   }
+
 }
