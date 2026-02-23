@@ -1,149 +1,205 @@
-# playstation - Renewal
+# 🎮 PlayStation Website Renewal Project
 
-## 프로젝트 개요
-
-### 현재 프로젝트를 진행하는중이기때문에 미완성 프로젝트 ###
-### 프로젝트 주제
-*playstation** - 완전한 반응형 디자인을 갖춘 플랫폼
-
-### 제작 목적
-- **실전 웹 개발 학습**: HTML, CSS, JavaScript를 활용한 사이트 구현
-- **반응형 웹 디자인 마스터**: 모바일, 태블릿, 데스크톱 모든 기기에서 완벽한 사용자 경험 제공
-
-### 주요 타겟 사용자
-- **주 사용자**: playstation 를 원하는 일반 소비자
-
-### 사용 기술 스택
-- **HTML5**: 시맨틱 마크업, 접근성 고려
-- **/CSS3**: 변수를 활용한 효율적인 스타일 관리
-- **JavaScript**: 기능 구현
-- **Bootstrap Icons**: 아이콘 라이브러리
-- **GSAP**: 스크롤 이벤트 구현
-- **Swiper**: 슬라이드 구현
-### 내가 맡은 섹션
-- **콘솔섹션**
-- **컨트롤러섹션**
-- **오디오섹션**
-- **plus구독섹션**
-
-
+> 공식 PlayStation 웹사이트를 사용자 중심 UI/UX와 인터랙션 중심 구조로 재해석한 프론트엔드 팀 프로젝트  
+> **“게임을 하듯 몰입하게 만드는 웹 경험”**을 목표로 기획·설계·구현했습니다.
 
 ---
 
-## 🏗️ 전체 구조 설명
+## 📌 1. Project Overview
 
-### 폴더 구조
+### 1) 기획 배경
 
+기존 PlayStation 공식 사이트는
+
+- 정적인 레이아웃
+- 단조로운 컬러 운용
+- 텍스트 위계 부족
+- 인터랙션 부재
+- 웹과 콘솔 앱의 분리 구조
+
+등의 한계로 인해 **신규 유입과 브랜드 몰입 경험이 약한 구조**였습니다.
+
+본 프로젝트는 이를 개선하여:
+
+- 신규 고객 유입 확대  
+- 브랜드 이미지의 동적 전환  
+- 웹 기반 경험 강화  
+
+를 목표로 리뉴얼을 진행했습니다.
+
+---
+
+## 🎯 2. Renewal Strategy
+
+### ✔ 문제 정의
+
+- 텍스트 계층 구조 불명확  
+- 작은 검색 필드  
+- 인터랙션 단절감  
+- 단일 톤 컬러 사용  
+- 콘텐츠 대비 공간 비효율  
+
+### ✔ 컨셉 키워드
+
+- 새로움  
+- 재미  
+- 몰입감  
+- 빛  
+- 생동감  
+
+### ✔ 리뉴얼 방향
+
+- 메인 블루 기반 다채로운 컬러 확장  
+- 타이포그래피 위계 정립  
+- 하이엔드 스크롤 인터랙션 도입  
+- 데이터 기반 동적 렌더링 구조 설계  
+
+---
+
+## 🗺 3. Site Map
 ```
+Loading
+└─ Main
+├─ Login
+├─ Game Detail
+├─ PS5
+├─ PS5 Pro
+├─ Accessories
+├─ Store
+│ └─ Game Detail
+└─ News
+```
+---
+
+## 🖥 4. Core Features
+
+### 🏠 Main Page
+
+- Hero Video 기반 몰입형 비주얼
+- GSAP + ScrollTrigger 시네마틱 인터랙션
+- DualSense 가로 스크롤 섹션
+- Intersection Observer 기반 성능 최적화
+
+---
+
+### 🛒 Store Page
+
+- **Multi-Filtering 시스템**
+  - 장르 / 가격 / 별점 / 검색어 조합
+- **LocalStorage 기반 위시리스트**
+- 반응형 Swiper 동적 생성/해제
+
+---
+
+### 🎮 Game Detail Page
+
+- URLSearchParams 기반 단일 템플릿 전략
+- games.js 중앙 데이터 관리
+- 게임별 브랜딩 커스터마이징 (컬러·커서·배경 동기화)
+
+---
+
+### 🕹 PS5 Hardware Page
+
+- 수학적 각도 계산 기반 Rotation UI
+- 모바일 Scroll Lock 시스템
+- 스크롤 위치 동기화 애니메이션
+
+---
+
+### 📰 News Page
+
+- 2단계 액션 UX (모바일)
+- 반응형 슬라이더 자동 전환
+- 데이터 기반 외부 링크 연동
+
+---
+
+## ⚙ 5. Tech Stack
+
+| Category | Stack |
+|----------|--------|
+| Markup | HTML5 |
+| Style | CSS3 (Variable Architecture) |
+| Script | JavaScript (ES6) |
+| Library | GSAP / ScrollTrigger / Swiper / jQuery |
+| Optimization | Intersection Observer |
+| Storage | LocalStorage |
+
+---
+
+## 📂 6. Folder Structure
+
+```plaintext
 project-root/
-├─ index.html 		#메인화면 html
-├─ login.html 		#로그인화면 html
-├─ ps5.html 		#PS5 기기 소개 화면 html
-├─ ps5-pro.html		#PS5 Pro 기기 소개 화면 html
-├─ accessories.html 	#액세서리 기기 소개 화면 html
-├─ store.html 		#게임 스토어 화면 html
-├─ game.html 		#게임 상세 소개 화면 html
-├─ news.html 		#이달의 PS 화면 html
+├─ index.html
+├─ login.html
+├─ ps5.html
+├─ ps5-pro.html
+├─ accessories.html
+├─ store.html
+├─ game.html
+├─ news.html
 │
 ├─ include/
-│  ├─ header.html 	#공통 header html
-│  ├─ footer.html 	#공통 footer html
-│  └─ mobile-menu.html 	#태블릿 사이즈 이하 헤더 사이드 메뉴 html
+│  ├─ header.html
+│  ├─ footer.html
+│  └─ mobile-menu.html
 │
 ├─ css/
-│  ├─ common/ 		#프로젝트 공통 css 폴더
-│  │  ├─ font.css	#폰트 정의 css
-│  │  ├─ variable.css	#변수 정의 css
-│  │  ├─ reset.css	#작업 환경 초기화 css
-│  │  ├─ component.css	#공통 요소 전용 css
-│  │  ├─ import.css	#공통 css 및 CDN 링크 import용 css
-│  │  └─ basic-layout.css	#전체 화면 공통 레이아웃 css
-│  └─ pages/ 		#프로젝트 화면 전체 css 폴더
-│     ├─ index.css	#메인 화면 css
-│     ├─ login.css	#로그인 화면 css
-│     ├─ ps5.css		#PS5 기기 소개 화면 css
-│     ├─ ps5-pro.css	#PS5 Pro 기기 소개 화면 css
-│     ├─ accessories.css	#액세서리 기기 소개 화면 css
-│     ├─ store.css	#게임 스토어 화면 css
-│     ├─ game.css	#게임 상세 소개 화면 css
-│     └─ news.css	#이달의 PS 화면 css
+│  ├─ common/
+│  │  ├─ font.css
+│  │  ├─ variable.css
+│  │  ├─ reset.css
+│  │  ├─ component.css
+│  │  ├─ import.css
+│  │  └─ basic-layout.css
+│  └─ pages/
+│     ├─ index.css
+│     ├─ login.css
+│     ├─ ps5.css
+│     ├─ ps5-pro.css
+│     ├─ accessories.css
+│     ├─ store.css
+│     ├─ game.css
+│     └─ news.css
 │
-├─ js/			#프로젝트 전역 js 데이터 폴더
-│  ├─ data/		#프로젝트 전역 js 데이터 폴더
-│  │  └─ games.js	#전체 게임 상세 정보 정의 객체 변수 js
-│  ├─ common/		#프로젝트 전체페이지 공통 기능
-│  │  ├─ import.js 	 # 라이브러리 cdn 주소 불러오기 및 시스템 전체 공통 기능
+├─ js/
+│  ├─ data/
+│  │  └─ games.js
+│  ├─ common/
+│  │  ├─ import.js
 │  │  ├─ header.js
 │  │  └─ footer.js
-│  └─ pages/		#프로젝트 화면 전체 js 폴더
-│     ├─ index/		#메인 화면 js 폴더
-│     │  ├─ constants.js	#해당 화면 전용 변수/상수/옵션 모음 js (예시)
-│     │  └─ function.js	#기능 함수 정의 js
-│     │  └─ script.js	#기능 실행 js
-│     ├─ login/		#로그인 화면 js 폴더 (하위 구조는 위와 동일)
-│     ├─ ps5/		#PS5 기기 소개 화면 js 폴더 (하위 구조는 위와 동일)
-│     ├─ ps5-pro/	#PS5 Pro 기기 소개 화면 js 폴더 (하위 구조는 위와 동일)
-│     ├─ accessories/	#액세서리 기기 소개 화면 js 폴더 (하위 구조는 위와 동일)
-│     ├─ store/		#게임 스토어 화면 js 폴더 (하위 구조는 위와 동일)
-│     ├─ game/		#게임 상세 소개 화면 js 폴더 (하위 구조는 위와 동일)
-│     └─ news/		#이달의 PS 화면 js 폴더 (하위 구조는 위와 동일)
+│  └─ pages/
+│     ├─ index/
+│     │  ├─ index.js
+│     │  └─ constants.js
+│     ├─ login/
+│     │  ├─ index.js
+│     │  └─ constants.js
+│     ├─ ps5/
+│     │  ├─ index.js
+│     │  └─ constants.js
+│     ├─ ps5-pro/
+│     │  ├─ index.js
+│     │  └─ constants.js
+│     ├─ accessories/
+│     │  ├─ index.js
+│     │  └─ constants.js
+│     ├─ store/
+│     │  ├─ index.js
+│     │  └─ constants.js
+│     ├─ game/
+│     │  ├─ index.js
+│     │  └─ selectors.js
+│     └─ news/
+│        ├─ index.js
+│        └─ constants.js
 │
-├─ vendor/                  	 #라이브러리 로컬 파일 폴더(※ CDN 대신 로컬 라이브러리 파일 사용하는 경우 라이브러리별로 하위 폴더 생성)
-│  ├─ gsap/
-│  ├─ swiper/
-│  └─ bootstrap/ 
+├─ vendor/ (optional)
 │
-└─ assets/			#프로젝트 전체 소스 파일 폴더
-   ├─ icon/			#프로젝트 전체 아이콘 파일 폴더
-   │  └─ (공통 아이콘 파일들)
-   ├─ img/			#프로젝트 전체 이미지 파일 폴더
-   │  ├─ pages/                        	#화면별 이미지 파일 폴더
-   │  │  ├─ index/		#메인 화면 이미지 파일 폴더
-   │  │  ├─ login/		#로그인 화면 이미지 파일 폴더
-   │  │  ├─ ps5/		#PS5 기기 소개 화면 이미지 파일 폴더
-   │  │  ├─ ps5-pro/		#PS5 Pro 기기 소개 화면 이미지 파일 폴더
-   │  │  ├─ accessories/		#액세서리 기기 소개 화면 이미지 파일 폴더
-   │  │  ├─ store/		#게임 스토어 화면 이미지 파일 폴더
-   │  │  └─ news/		#이달의 PS 화면 이미지 파일 폴더
-   │  └─ games/                        	게임별 이미지 파일 폴더 (하위 폴더 총 30개)
-   │     ├─ game01/
-   │     │  ├─ hero.jpg
-   │     │  ├─ 01.jpg
-   │     │  └─ 02.jpg
-   │     └─ (30개 게임 폴더...)
-   └─ video/			#프로젝트 전체 영상 파일 폴더
-      ├─ pages/                        	#화면별 영상 파일 폴더
-      │  ├─ index/		#메인 화면 영상 파일 폴더
-      │  ├─ login/		#로그인 화면 영상 파일 폴더
-      │  ├─ ps5/			#PS5 기기 소개 화면 영상 파일 폴더
-      │  ├─ ps5-pro/		#PS5 Pro 기기 소개 화면 영상 파일 폴더
-      │  ├─ accessories/		#액세서리 기기 소개 화면 영상 파일 폴더
-      │  ├─ store/		#게임 스토어 화면 영상 파일 폴더
-      │  └─ news/		#이달의 PS 화면 영상 파일 폴더
-      └─ games/                        	#게임별 영상 파일 폴더 (하위 폴더 총 30개)
-         ├─ game01/
-         │  └─ trailer.mp4
-         └─ (30개 게임 폴더...)
-```
-## 📄 페이지별 구현 의도 및 설명
-
-### [메인 페이지 (index.html)]
-
-**구현 목표**: 사용자가 제품의 장점과 기능을 볼수있게
-
-**핵심 기능**:
-- 콘솔, 컨트롤서, 오디오 스크롤 이벤트
-- plus 구독 부분 스크롤 이벤트와 슬라이드
-
-
-**구현 방법**:
-- **콘솔, 컨트롤서, 오디오 스크롤 이벤트**: GSAP사용하여 스크롤 이벤트 구현
-- **plus 구독**: GSAP, Swiper 사용하여 스크롤 이벤트와 슬라디으 구현
-
-
-**어려웠던 점**:
-- GSPA를 처음사용해보면서 익숙하지 않아서 공부하면서 작업했다
-- 스크롤 이벤트를 애니매이션을 많이 넣고 하는것은 처음이여서 구현하는데 어려웠다
-
-
----
+└─ assets/
+   ├─ icon/
+   ├─ img/
+   └─ video/
